@@ -1,0 +1,18 @@
+--! Explicação do banco de dados:
+
+Com o código Create User 'admin'@'localhost' Identified by '123qwe!@#';
+Criamos um usuario administrador com a senha 123qwe!@#, em seguida definimos os privilégios com o código: Grant All Privileges,
+e selecionamos o usuario administrador, para gravar as informações usamos o Flush Privileges;
+
+Com o usuário que só terá o privilégio de visualização para todos os campos da tabela usamos o Grant Select on e o Flush Privileges para gravar novamente as informações.
+
+Depois temos a criação das tabelas Cliente, Telefone e Email,
+
+Quando usamos o CONSTRAINT chk_nome_format CHECK(nome REGEXP '^[A-Za-z0-9 ]{3,100}$'), fazemos a restrição para o campo nome, para não ser menos de 3 caracteres e nem passar de 100.
+A mesma lógica se aplica com o cpf e o cep.
+
+A tabela telefone nao tem muito o que dizer, esta com o código em padrão, já a do E-mail, temos a mesma logica com a do CPF, CEP e Nome, onde fazemos a validação pra saber se vai ser um
+email válido ou não;
+
+--! Explicação do Aplicativo vai ter os campos de linhas onde vou explicar o código fonte pelo aplicativo.
+Escolhi para o desenvolvimento do back-end o IntelliJ, onde acho que o código fica de uma forma mais limpa e fácil formatação.
