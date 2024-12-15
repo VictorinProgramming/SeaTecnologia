@@ -1,0 +1,30 @@
+Controller,DTO,Entity,Repository,Service,Resources,Atualização do pom.xml Criados e atualizados.
+Dentro do arquivo pom.xml foi feita algumas alterações.
+
+Admito que não consegui resolver a Questão do EntityEmail. Onde o erro persiste em @Email;
+Mesmo ao criar o controller e o EmailService, o erro persiste.
+Onde quando pesquisado, fala que é sobre a validação, mas está com a dependencia correta.
+
+        <!-- Hibernate Validator -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.4.Final</version>
+        </dependency>
+
+        <!-- Spring Boot Starter Validation -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <version>2.6.7</version>
+        </dependency>
+
+Quando Clicado na lampada do lado, fala pra trocar o Change Access Modifier, e mesmo alterando para public não é possivel a correção;
+
+    @NotEmpty
+    @org.hibernate.validator.constraints.Email
+    //@Email
+    private String email;
+
+Deixei o código assim onde eu sei que o correto era o @Email estar sendo usado, mas por ser inexperiente, gostaria de ter a oportunidade para poder aprender com a equipe.
+Sei que posso ter grande potencial, e aqui eu finalizo minha apresentação do projeto.

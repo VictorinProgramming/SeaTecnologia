@@ -5,8 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.*;
+
 
 @Data
 @NoArgsConstructor
@@ -23,6 +24,7 @@ public class Email {
     private Cliente cliente;
 
     @NotEmpty
-    @Email
+    @org.hibernate.validator.constraints.Email
+    //@Email
     private String email;
-}
+}   
